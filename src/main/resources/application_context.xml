@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="vo1" class="com.leemanni.vo.UserStockVO">
+		<constructor-arg value="삼성전자"></constructor-arg>
+		<constructor-arg value="80"></constructor-arg>
+		<constructor-arg value="64356"></constructor-arg>
+		<constructor-arg value="64100"></constructor-arg>
+	</bean>
+	
+	<bean id="vo2" class="com.leemanni.vo.UserStockVO"
+	c:name="카카오"
+	c:ownStocks="20"
+	c:p_price="130000"
+	c:c_price="117000"/>
+	
+	
+	
+
+</beans>
