@@ -9,6 +9,10 @@ public class AdminConnection implements EnvironmentAware, InitializingBean{
 	private int age;
 	private String id;
 	private String pw;
+	private String name_sub;
+	private int age_sub;
+	private String id_sub;
+	private String pw_sub;
 	
 	private Environment env;
 	
@@ -36,9 +40,42 @@ public class AdminConnection implements EnvironmentAware, InitializingBean{
 	public void setPw(String pw) {
 		this.pw = pw;
 	}
+	
+	public String getName_sub() {
+		return name_sub;
+	}
+	public void setName_sub(String name_sub) {
+		this.name_sub = name_sub;
+	}
+	public int getAge_sub() {
+		return age_sub;
+	}
+	public void setAge_sub(int age_sub) {
+		this.age_sub = age_sub;
+	}
+	public String getId_sub() {
+		return id_sub;
+	}
+	public void setId_sub(String id_sub) {
+		this.id_sub = id_sub;
+	}
+	public String getPw_sub() {
+		return pw_sub;
+	}
+	public void setPw_sub(String pw_sub) {
+		this.pw_sub = pw_sub;
+	}
+	public Environment getEnv() {
+		return env;
+	}
+	public void setEnv(Environment env) {
+		this.env = env;
+	}
+	
 	@Override
 	public String toString() {
-		return "AdminConnection [name=" + name + ", age=" + age + ", id=" + id + ", pw=" + pw + "]";
+		return "AdminConnection [name=" + name + ", age=" + age + ", id=" + id + ", pw=" + pw + ", name_sub=" + name_sub
+				+ ", age_sub=" + age_sub + ", id_sub=" + id_sub + ", pw_sub=" + pw_sub + ", env=" + env + "]";
 	}
 	@Override
 	public void setEnvironment(Environment environment) {
@@ -52,6 +89,10 @@ public class AdminConnection implements EnvironmentAware, InitializingBean{
 		age = Integer.parseInt(env.getProperty("admin.age"));
 		id= env.getProperty("admin.id");
 		pw=env.getProperty("admin.pw");
+		name_sub = env.getProperty("admin.name_sub");
+		age_sub = Integer.parseInt(env.getProperty("admin.age_sub"));
+		id_sub= env.getProperty("admin.id_sub");
+		pw_sub=env.getProperty("admin.pw_sub");
 	}
 	
 	

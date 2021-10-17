@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+	<context:property-placeholder location="classpath:admin_sub.properties, classpath:admin.properties"/>
+	
+		<bean id="admin" class="com.leemanni.properties.AdminConnection_noneEnv">
+			<property name="name" value="${admin.id}"></property>
+			<property name="age" value="$(admin.age}"></property>
+			<property name="id" value="${admin.id}"></property>
+			<property name="pw" value="${admin.pw}"></property>
+		</bean>
+		<bean id="admin_sub" class="com.leemanni.properties.AdminConnection_noneEnv">
+			<property name="name_sub" value="${admin.id_sub}"></property>
+			<property name="age_sub" value="${admin.age_sub}"></property>
+			<property name="id_sub" value="${admin.id_sub}"></property>
+			<property name="pw_sub" value="${admin.pw_sub}"></property>
+		</bean>
+</beans>
