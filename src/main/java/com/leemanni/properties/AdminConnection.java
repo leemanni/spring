@@ -6,11 +6,11 @@ import org.springframework.core.env.Environment;
 
 public class AdminConnection implements EnvironmentAware, InitializingBean{
 	private String name;
-	private int age;
+	private String age;
 	private String id;
 	private String pw;
 	private String name_sub;
-	private int age_sub;
+	private String age_sub;
 	private String id_sub;
 	private String pw_sub;
 	
@@ -22,10 +22,10 @@ public class AdminConnection implements EnvironmentAware, InitializingBean{
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getAge() {
+	public String getAge() {
 		return age;
 	}
-	public void setAge(int age) {
+	public void setAge(String age) {
 		this.age = age;
 	}
 	public String getId() {
@@ -47,10 +47,10 @@ public class AdminConnection implements EnvironmentAware, InitializingBean{
 	public void setName_sub(String name_sub) {
 		this.name_sub = name_sub;
 	}
-	public int getAge_sub() {
+	public String getAge_sub() {
 		return age_sub;
 	}
-	public void setAge_sub(int age_sub) {
+	public void setAge_sub(String age_sub) {
 		this.age_sub = age_sub;
 	}
 	public String getId_sub() {
@@ -86,11 +86,11 @@ public class AdminConnection implements EnvironmentAware, InitializingBean{
 	public void afterPropertiesSet() throws Exception {
 		System.out.println("properties 정보를 객체에 주입합니다.");
 		name = env.getProperty("admin.name");
-		age = Integer.parseInt(env.getProperty("admin.age"));
+		age = env.getProperty("admin.age");
 		id= env.getProperty("admin.id");
 		pw=env.getProperty("admin.pw");
 		name_sub = env.getProperty("admin.name_sub");
-		age_sub = Integer.parseInt(env.getProperty("admin.age_sub"));
+		age_sub = env.getProperty("admin.age_sub");
 		id_sub= env.getProperty("admin.id_sub");
 		pw_sub=env.getProperty("admin.pw_sub");
 	}

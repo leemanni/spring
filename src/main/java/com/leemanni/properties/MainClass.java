@@ -24,7 +24,7 @@ public class MainClass {
 //		방법은 4가지 , 1. first   2. last   3. brefore   4. after
 		try {
 			// ResourcePropertySource 익명객체 생성자에 properties 위치 전달
-			mps.addLast(new ResourcePropertySource("classpath:admin.properties"));
+			mps.addLast(new ResourcePropertySource("classpath:adminadmin.age_sub.properties"));
 			mps.addLast(new ResourcePropertySource("classpath:admin_sub.properties"));
 			System.out.println("name : " + env.getProperty("admin.name"));
 			
