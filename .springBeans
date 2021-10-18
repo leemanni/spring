@@ -10,6 +10,7 @@
 		<config>src/main/resources/application_context.xml</config>
 		<config>src/main/resources/admin_application_context.xml</config>
 		<config>src/main/resources/admin_application_context_useXML.xml</config>
+		<config>src/main/resources/application_context_useAOP.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
